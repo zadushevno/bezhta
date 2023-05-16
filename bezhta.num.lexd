@@ -1,0 +1,105 @@
+PATTERNS
+(NumRoot[-1,-2] Tens) (Part Ordinal) | (CompoundOrdinal Ord_Plural | Ord_Singular) | Part # 30-90
+NumRoot Hundreds Part? # 100-900
+
+
+NumRoot[-1,-4]|Ten|Twenty Ordinal | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковые 2-10
+First [<ord>:]
+NumRoot[1] (Part Ordinal) |  (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковое 1
+NumRoot[4] [<ord>:ш] | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковое 4
+NumRoot Hundreds (Part Ordinal) | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковые 100-900
+(NumRoot Hundreds)? Thousand (Part Ordinal) | (CompoundOrdinal_2 Ord_Plural | Ord_Singular) # Xсоттысячный
+
+
+NumRoot-Obl Multiple Part # кратные 1-10, 20
+NumRoot[-1,-2] Tens|Hundreds|Thousand Inf Multiple # большие кратные 
+NumRoot Part # собирательные
+Distributive [<dstr>:] # дистрибутивные (по X)
+
+
+LEXICON NumRoot
+гьоᴴс[1]	# один
+къона[2]	# два
+лъана		# три
+оьᴴкъоьнаь[4]	# четыре
+лъина		# пять
+илъна		# шесть
+алӏна		# семь
+белӏна		# восемь
+аьчӏена		# девять
+
+LEXICON First
+гьоᴴс:аьᴴйддāьш # первый
+
+LEXICON NumRoot-Obl
+гьоᴴс:гьаᴴкъка[1]		# один
+къона:кӏа[2]			# два
+лъана:лъа			# три
+оьᴴкъоьнаь:оьᴴкъоьваь	# четыре
+лъина:лъийа			# пять
+илъна:илъей			# шесть
+алӏна:алӏова		# семь
+белӏна:белӏейа		# восемь  
+аьчӏена:аьчӏейа		# девять
+ацӏона:ацӏова		# десять
+хъона:хъова			# двадцать
+гьазай:гьазаййа		# тысяча
+
+
+LEXICON Distributive
+гьоᴴс:гьōᴴ-гьоᴴс	# один
+къона:къō-къона	# два
+лъана:лъā-лъана		# три
+оьᴴкъоьнаь:ōьᴴ-оьᴴкъоьнаь	# четыре
+лъина:лъи-лъина		# пять
+илъна:и-илъна		# шесть
+алӏна:ā-алӏна		# семь
+белӏна:бē-белӏна		# восемь
+аьчӏена:āь-аьчӏена		# девять
+ацӏона:ā-ацӏона		# десять
+хъона:хъō-хъона
+
+LEXICON Ten
+ацӏона		# десять
+
+LEXICON Twenty
+хъона		# двадцать
+
+LEXICON Tens
+<ten>:йиг
+
+LEXICON Hundreds
+<hundred>:чӏитӏ
+
+LEXICON Thousand
+<thousand>:гьазай	# тысяча
+
+LEXICON Billion
+милион	# миллион
+милиард # миллиард
+
+LEXICON Inf
+<inf>:а
+
+#-----------------------
+
+LEXICON Ordinal
+<ord>:с
+
+LEXICON CompoundOrdinal
+<compord>:ийāлӏей
+LEXICON CompoundOrdinal_2
+<compord>:илӏей
+
+LEXICON Ord_Singular
+<sg>:о
+
+LEXICON Ord_Plural
+<pl>:а
+
+#-----------------------
+
+LEXICON Multiple
+<mult>:х
+LEXICON Part
+<part>:на
