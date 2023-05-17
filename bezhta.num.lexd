@@ -1,20 +1,21 @@
 PATTERNS
-(NumRoot[-1,-2] Tens) (Part Ordinal) | (CompoundOrdinal Ord_Plural | Ord_Singular) | Part # 30-90
+(NumRoot[-1,-2] Tens) (Part Ordinal ([<obl>:ли]NumInfl)?) | CompoundOrdinal | Part # порядковые и собирательные 30-90
 NumRoot Hundreds Part? # 100-900
+NumRoot-Obl NumInfl #склонение по основным падежам 1-10, 20
+(NumRoot[-1,-2] Tens) | (NumRoot Hundreds) | Thousand [<obl>:ла] NumInfl #склонение по основным падежам 30-1000
 
-
-NumRoot[-1,-4]|Ten|Twenty Ordinal | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковые 2-10
+NumRoot[-1,-4]|Ten|Twenty (Ordinal ([<obl>:ли] NumInfl)?) | CompoundOrdinal # порядковые 2-10
 First [<ord>:]
-NumRoot[1] (Part Ordinal) |  (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковое 1
-NumRoot[4] [<ord>:ш] | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковое 4
-NumRoot Hundreds (Part Ordinal) | (CompoundOrdinal Ord_Plural | Ord_Singular) # порядковые 100-900
-(NumRoot Hundreds)? Thousand (Part Ordinal) | (CompoundOrdinal_2 Ord_Plural | Ord_Singular) # Xсоттысячный
+NumRoot[1] (Part Ordinal ([<obl>:ли] NumInfl)?) |  CompoundOrdinal # порядковое 1
+NumRoot[4] ([<ord>:ш] NumInfl?) | CompoundOrdinal # порядковое 4
+NumRoot Hundreds (Part Ordinal ([<obl>:ли] NumInfl)?) | CompoundOrdinal # порядковые 100-900
+(NumRoot Hundreds)? Thousand (Part Ordinal ([<obl>:ли] NumInfl)?) | CompoundOrdinal_2 # Xсоттысячный
 
 
-NumRoot-Obl Multiple Part # кратные 1-10, 20
+NumRoot-Mult Multiple Part # кратные 1-10, 20
 NumRoot[-1,-2] Tens|Hundreds|Thousand Inf Multiple # большие кратные 
 NumRoot Part # собирательные
-Distributive [<dstr>:] # дистрибутивные (по X)
+Distributive[-1] [<dstr>:] [<abs>:а] | ([<obl>:и] NumInfl)?  # дистрибутивные (по X)
 
 
 LEXICON NumRoot
@@ -31,7 +32,7 @@ LEXICON NumRoot
 LEXICON First
 гьоᴴс:аьᴴйддāьш # первый
 
-LEXICON NumRoot-Obl
+LEXICON NumRoot-Mult
 гьоᴴс:гьаᴴкъка[1]		# один
 къона:кӏа[2]			# два
 лъана:лъа			# три
@@ -47,17 +48,37 @@ LEXICON NumRoot-Obl
 
 
 LEXICON Distributive
-гьоᴴс:гьōᴴ-гьоᴴс	# один
-къона:къō-къона	# два
-лъана:лъā-лъана		# три
-оьᴴкъоьнаь:ōьᴴ-оьᴴкъоьнаь	# четыре
-лъина:лъи-лъина		# пять
-илъна:и-илъна		# шесть
-алӏна:ā-алӏна		# семь
-белӏна:бē-белӏна		# восемь
-аьчӏена:āь-аьчӏена		# девять
-ацӏона:ā-ацӏона		# десять
-хъона:хъō-хъона
+гьоᴴс:гьōᴴ-гьоᴴс[1]	# один
+къона:къō-къон	# два
+лъана:лъā-лъан		# три
+оьᴴкъоьнаь:ōьᴴ-оьᴴкъоьн	# четыре
+лъина:лъи-лъин		# пять
+илъна:и-илън		# шесть
+алӏна:ā-алӏн		# семь
+белӏна:бē-белӏн		# восемь
+аьчӏена:āь-аьчӏен		# девять
+ацӏона:ā-ацӏон		# десять
+хъона:хъō-хъон		# двадцать
+
+LEXICON NumRoot-Obl
+гьоᴴс:сиди	# один
+къона:къони	# два
+лъана:лъани		# три
+оьᴴкъоьнаь:оьᴴкъоьни	# четыре #какая косвенная основа?
+лъина:лъини		# пять
+илъна:илъни		# шесть
+алӏна:алӏни		# семь
+белӏна:белӏни		# восемь
+аьчӏена:аьчӏени		# девять
+ацӏона:ацӏони		# десять
+хъона:хъони		# двадцать
+
+LEXICON NumInfl
+<erg>:
+<genI>:с
+<genII>:ла
+<dat>:л
+<ins>:д
 
 LEXICON Ten
 ацӏона		# десять
@@ -87,15 +108,12 @@ LEXICON Ordinal
 <ord>:с
 
 LEXICON CompoundOrdinal
-<compord>:ийāлӏей
+<compord><sg>:ийāлӏейо
+<compord><pl>:ийāлӏейа
+
 LEXICON CompoundOrdinal_2
-<compord>:илӏей
-
-LEXICON Ord_Singular
-<sg>:о
-
-LEXICON Ord_Plural
-<pl>:а
+<compord><sg>:илӏейо
+<compord><pl>:илӏейа
 
 #-----------------------
 
@@ -103,3 +121,4 @@ LEXICON Multiple
 <mult>:х
 LEXICON Part
 <part>:на
+
